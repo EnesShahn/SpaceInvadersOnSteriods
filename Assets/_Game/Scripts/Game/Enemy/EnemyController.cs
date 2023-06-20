@@ -16,6 +16,11 @@ public class EnemyController : MonoBehaviour
     {
         _shipController.OnShipDestroyed += OnShipDestroyed;
     }
+    private void OnDisable()
+    {
+        DOTween.Kill(transform);
+    }
+
     private void Update()
     {
         if (transform.position.y < EnemyManager.Instance.EnemyCrossLine.position.y)
@@ -24,10 +29,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        DOTween.Kill(transform);
-    }
+
     private void OnShipDestroyed()
     {
         _shipController.Collider.enabled = false;
@@ -35,7 +37,6 @@ public class EnemyController : MonoBehaviour
         {
             EnemyManager.Instance.DestroyEnemy(this);
             _shipController.Collider.enabled = true;
-            transform.localScale = Vector3.one;
         });
     }
 }

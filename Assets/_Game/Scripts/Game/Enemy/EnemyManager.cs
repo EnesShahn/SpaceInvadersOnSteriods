@@ -62,7 +62,7 @@ public class EnemyManager : Singleton<EnemyManager>
         Vector3 halfEnemySize = enemySize * 0.5f;
 
         _enemyGroup.transform.position = _enemyGroupSpawnPosition.position;
-        _enemyGroup.SetMaxXPosition(WorldHelper.WorldSize.x * 0.5f - halfGridSize.x * enemySize.x);
+        _enemyGroup.SetMaxXPosition(WorldHelper.WorldSize.x * 0.5f - halfGridSize.x * enemySize.x * _spacing.x);
 
         for (int i = 0; i < gridSize.x; i++)
         {

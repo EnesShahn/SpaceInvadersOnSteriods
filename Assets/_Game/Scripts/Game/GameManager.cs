@@ -56,7 +56,7 @@ public class GameManager : Singleton<GameManager>
 
     private void StartNextWave()
     {
-        EnemyManager.Instance.SpawnEnemies(new Vector2Int(15, 10));
+        EnemyManager.Instance.SpawnEnemies(new Vector2Int(15, 15));
     }
     private void ProcessGameOver()
     {
