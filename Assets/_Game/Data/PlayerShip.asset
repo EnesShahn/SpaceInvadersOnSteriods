@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19504173193b06f44aa79c45ef36a096, type: 3}
+  m_Name: PlayerShip
+  m_EditorClassIdentifier: 
+  _attributes:
+    _items:
+    - rid: 3915759379011600384
+    - rid: 3915759379011600386
+  references:
+    version: 2
+    RefIds:
+    - rid: 3915759379011600384
+      type: {class: ShipAttribute, ns: , asm: Assembly-CSharp}
+      data:
+        _health: 1
+    - rid: 3915759379011600386
+      type: {class: GunAttribute, ns: , asm: Assembly-CSharp}
+      data:
+        _bulletDamage: 1
+        _bulletSpeed: 7
+        _fireIntervalMin: 0.05
+        _fireIntervalMax: 0.05
